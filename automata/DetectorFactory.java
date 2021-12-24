@@ -38,7 +38,7 @@ import automata.turing.TMNondeterminismDetector;
  * @author Thomas Finley
  */
 
-public class NondeterminismDetectorFactory {
+public class DetectorFactory {
     /**
      * Returns the nondeterminism detector for this type of automaton.
      * @param automaton the automaton to get the nondeterminism
@@ -47,7 +47,7 @@ public class NondeterminismDetectorFactory {
      * or <CODE>null</CODE> if there is no automaton simulator known
      * for this type of automaton
      */
-    public static NondeterminismDetector getDetector(Automaton automaton) {
+    public static Detector getDetector(Automaton automaton) {
 	if (automaton instanceof automata.fsa.FiniteStateAutomaton)
 	    return new FSANondeterminismDetector();
 	else if (automaton instanceof automata.pda.PushdownAutomaton)

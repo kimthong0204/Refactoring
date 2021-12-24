@@ -92,12 +92,7 @@ public class MenuBarCreator {
 	JMenu menu = new JMenu("File");
 	addItem(menu, new NewAction());
 	SecurityManager sm = System.getSecurityManager();
-	if (Universe.CHOOSER != null) {
-	    // Can't open and save files.
-	    addItem(menu, new OpenAction());
-	    addItem(menu, new SaveAction(environment));
-	    addItem(menu, new SaveAsAction(environment));
-	}
+	extracted(environment, menu);
 	addItem(menu, new CloseAction(environment));
 	addItem(menu, new CloseWindowAction(frame));
 	try {
@@ -114,6 +109,15 @@ public class MenuBarCreator {
 	}
 	return menu;
     }
+
+	private static void extracted(Environment environment, JMenu menu) {
+		if (Universe.CHOOSER != null) {
+		    // Can't open and save files.
+		    addItem(menu, new OpenAction());
+		    addItem(menu, new SaveAction(environment));
+		    addItem(menu, new SaveAsAction(environment));
+		}
+	}
 
     /**
      * Instantiates the menu that holds input related menu events.
@@ -187,7 +191,7 @@ public class MenuBarCreator {
 	/*if (UnnecessaryAction.isApplicable(object))
 	    addItem(menu, new UnnecessaryAction
 		    ((automata.Automaton) object, environment));*/
-	if (LambdaHighlightAction.isApplicable(object))
+	if (LambdaHighlightAction.Applicable(object))
 	    addItem(menu, new LambdaHighlightAction
 		    ((automata.Automaton) object, environment));
 
@@ -243,7 +247,7 @@ public class MenuBarCreator {
 	    addItem(menu, new REToFSAAction
 		    ((gui.environment.RegularEnvironment) environment));
 
-	if (CombineAutomaton.isApplicable(object))
+	if (CombineAutomaton.Applicable(object))
 	    addItem(menu, new CombineAutomaton
 		    ((gui.environment.AutomatonEnvironment) environment));
 

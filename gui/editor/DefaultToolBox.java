@@ -31,6 +31,8 @@ import gui.viewer.AutomatonPane;
 import java.awt.Component;
 import java.util.List;
 
+import automata.StateTool;
+
 /**
  * The <CODE>DefaultToolBox</CODE> has all the tools for general
  * editing of an automaton.

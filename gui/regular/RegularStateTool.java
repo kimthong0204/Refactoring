@@ -27,7 +27,7 @@
 package gui.regular;
 
 import automata.State;
-import gui.editor.StateTool;
+import automata.StateTool;
 import gui.viewer.AutomatonDrawer;
 import gui.viewer.AutomatonPane;
 import java.awt.Component;

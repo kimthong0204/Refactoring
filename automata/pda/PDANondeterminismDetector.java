@@ -37,7 +37,7 @@ import automata.pda.*;
  * @author Ryan Cavalcante
  */
 
-public class PDANondeterminismDetector extends NondeterminismDetector {
+public class PDANondeterminismDetector extends Detector {
     /** 
      * Creates an instance of <CODE>PDANondeterminismDetectr</CODE>
      */

@@ -24,8 +24,9 @@
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  */
  
-package gui.editor;
+package automata;
 
+import gui.editor.Tool;
 import gui.viewer.AutomatonDrawer;
 import gui.viewer.AutomatonPane;
 import java.awt.Component;

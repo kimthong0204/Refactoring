@@ -55,7 +55,7 @@ public class AutomatonChecker {
 	if(!(automaton instanceof FiniteStateAutomaton)) { 
 	    return false;
 	}
-	NondeterminismDetector nd = new FSANondeterminismDetector();
+	Detector nd = new FSANondeterminismDetector();
 	State[] nondeterministicStates = 
 	    nd.getNondeterministicStates(automaton);
 	return nondeterministicStates.length > 0;

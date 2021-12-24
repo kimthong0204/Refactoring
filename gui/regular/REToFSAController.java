@@ -102,7 +102,16 @@ public class REToFSAController {
 	Point2D.Double pe = new Point2D.Double(0.8, 0.0);
 	automaton.removeTransition(transition);
 	for (int i=0; i<exps.length; i++) {
-	    pStart = new Point();
+	    extracted(exps, at, t, ps, pe, i);
+	}
+	return t;
+    }
+
+	private void extracted(String[] exps, AffineTransform at, FSATransition[] t, Point2D.Double ps, Point2D.Double pe,
+			int i) {
+		Point pStart;
+		Point pEnd;
+		pStart = new Point();
 	    pEnd = new Point();
 	    double y = exps.length > 1 ? 
 		((double)i/((double)exps.length-1.0) - 0.5)*0.5 : 0.0;
@@ -120,8 +129,6 @@ public class REToFSAController {
 	    automaton.addTransition(t[i]);
 	    if (requiredAction(t[i].getLabel()) != 0) toDo.add(t[i]);
 	}
-	return t;
-    }
 
     /**
      * Called when a transition is selected with the deexpressionifier

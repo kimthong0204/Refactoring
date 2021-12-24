@@ -37,11 +37,11 @@ import automata.*;
  * @author Ryan Cavalcante
  */
 
-public abstract class NondeterminismDetector {
+public abstract class Detector {
     /**
      * Creates an instance of <CODE>NondeterminismDetector</CODE>
      */
-    public NondeterminismDetector() {
+    public Detector() {
     }
 
     /**

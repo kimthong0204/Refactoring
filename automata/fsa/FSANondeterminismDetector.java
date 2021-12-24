@@ -37,7 +37,7 @@ import automata.fsa.*;
  * @author Ryan Cavalcante
  */
 
-public class FSANondeterminismDetector extends NondeterminismDetector {
+public class FSANondeterminismDetector extends Detector {
     /** 
      * Creates an instance of <CODE>FSANondeterminismDetector</CODE>
      */

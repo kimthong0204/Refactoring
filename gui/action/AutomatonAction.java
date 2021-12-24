@@ -60,7 +60,7 @@ public abstract class AutomatonAction extends RestrictedAction {
      * @return <CODE>true</CODE> if this action should be available to
      * an object of this type, <CODE>false</CODE> otherwise.
      */
-    public static boolean isApplicable(Object object) {
+    public static boolean Applicable(Object object) {
 	return object instanceof Automaton;
     }
 }
